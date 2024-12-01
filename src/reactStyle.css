@@ -1,0 +1,206 @@
+/*#reactDiv{
+  background-color: red;
+  margin: 0 0;
+  width: 500px;
+  justify-content: center;
+}*/
+
+
+
+/* General Body Styling */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: radial-gradient(circle, #1e1e1e, #121212, #0d0d0d); /* Dynamic dark radial gradient */
+  color: #ffffff; /* Default text color */
+  overflow-x: hidden; /* Prevent horizontal scroll */
+  line-height: 1.6; /* Improved text readability */
+}
+
+/* Navigation Bar */
+#navigationDiv {
+  background: linear-gradient(90deg, #191414, #0f0f0f); /* Gradient for more depth */
+  height: 70px;
+  width: 100%; /* Full-width navbar */
+  display: flex;
+  align-items: center;
+  margin-left: -200px;
+  justify-content: center; /* Centers content horizontally */
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.6); /* Subtle drop shadow */
+  position: sticky; /* Sticks at the top */
+  top: 0;
+  z-index: 10;
+}
+
+/* Search Bar */
+#searchBarInput {
+  width: 300px;
+  height: 35px;
+  margin-left: -200px;
+  border-radius: 20px;
+  border: 1px solid #1DB954; /* Green border for emphasis */
+  padding: 5px 20px;
+  background-color: #121212; /* Blended dark background */
+  color: #ffffff; /* White text */
+  font-family: 'Arial', sans-serif;
+  outline: none; /* Removes outline on focus */
+  transition: 0.3s ease-in-out; /* Smooth animations */
+}
+
+#searchBarInput::placeholder {
+  color: #a3a3a3; /* Softer placeholder text */
+  opacity: 0.8; /* Slight transparency */
+}
+
+#searchBarInput:focus {
+  background-color: #1DB954; /* Turns green on focus */
+  color: #121212; /* Inverts text color */
+}
+
+/* Search Button */
+#searchBarButton {
+  width: 120px;
+  height: 35px;
+  margin-left: 15px;
+  border-radius: 20px;
+  border: none; /* Cleaner button */
+  background: linear-gradient(135deg, #1DB954, #14863e); /* Gradient for a button */
+  color: #ffffff;
+  font-family: 'Arial', sans-serif;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Button depth */
+}
+
+#searchBarButton:hover {
+  transform: scale(1.1); /* Slight grow effect */
+  background: linear-gradient(135deg, #14863e, #1DB954); /* Inverse gradient */
+}
+
+/* Spotify-Like Dashboard Header */
+#Characteristic {
+  background: linear-gradient(135deg, #0A162C, #282D40); /* Spotify green to dark gradient */
+  height: 600px; /* Box height */
+  width: 500px; /* Box width */
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center; /* Centers content vertically */
+  border-radius: 20px; /* Rounded edges for a modern look */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Adds depth with shadow */
+  padding: 10px;
+  font-family: 'Spotify Circular', 'Arial', sans-serif; /* Spotify-inspired font */
+  color: #ffffff; /* White text for contrast */
+  font-size: 14px; /* Default font size */
+  text-align: center; /* Center-aligns text */
+  margin: 5px;
+}
+
+/* Custom Font */
+@font-face {
+  font-family: 'Spotify Circular';
+  src: url('https://open.spotifycdn.com/circular-spotify.ttf') format('truetype'); /* Spotify font link */
+}
+
+#Characteristic:hover {
+  background: linear-gradient(135deg, #121212, #1db954); /* Reverse gradient on hover */
+  transform: scale(1.02); /* Subtle grow effect */
+  transition: 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+/* Song Playlist */
+#songPlaylist {
+  background-color: #0c0c2b; /* Dark blue background */
+  display: grid; /* Grid layout for boxes */
+  grid-template-columns: repeat(4, 1fr); /* 4 boxes per row */
+  grid-gap: 5px; /* Space between boxes */
+  padding: 10px; /* Padding inside the playlist container */
+  overflow: auto; /* Allows scrolling if content overflows */
+  height: 600px;
+  width: 630px;
+  margin: 20px;
+  overflow-x: hidden; /* Prevent horizontal scrolling */
+  border-radius: 15px; /* Smooth corners for a modern look */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6); /* Subtle shadow for depth */
+}
+
+/* Customizable Boxes */
+.item {
+  background-color: #1db954; /* Spotify green */
+  display: flex;
+  justify-content: center; /* Center text horizontally */
+  align-items: center; /* Center text vertically */
+  color: #ffffff; /* White text */
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px; /* Rounded corners for each box */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4); /* Depth for boxes */
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.item:hover {
+  transform: scale(1.05); /* Slightly enlarges box on hover */
+  background-color: #14863e; /* Darker green on hover */
+}
+
+#yourTuneLabel {
+  background-color: #191414; /* Dark black background */
+  width: 960px;
+  height: 150px;
+  display: flex;
+  justify-content: center; /* Centers content horizontally */
+  align-items: center;     /* Centers content vertically */
+  font-size: 100px;
+  font-weight: bold;
+  color: #1DB954; /* Spotify green text */
+  text-transform: uppercase;
+  letter-spacing: 3px; /* Adds more spacing */
+  text-shadow: 4px 4px 12px rgba(0, 0, 0, 0.6); /* Enhanced shadow */
+  margin: 40px auto; /* Adds spacing above and below */
+  border-radius: 15px; /* Rounded corners for a modern look */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7); /* Adds depth */
+}
+
+/* Dashboard Description */
+#tuneDescription {
+  background: linear-gradient(135deg, #2A3133, #606364, #ABA4AA); /* Purple-to-magenta gradient */
+  width: 100%; /* Dynamic width for responsive design */
+  max-width: 1200px; /* Maximum size for larger screens */
+  height: 700px;
+  margin: 0 auto; /* Centered horizontally */
+  font-size: 16px; /* Improved readability */
+  display: flex;
+  /* justify-content: center; /* Centers content horizontally */
+   /*align-items: center;     /* Centers content vertically */
+  font-family: 'Roboto', sans-serif; /* Modern sans-serif font */
+  letter-spacing: 0.8px; /* Subtle spacing for better readability */
+  color: #f5f5f5; /* Off-white text for contrast */
+  overflow: auto; /* Ensures content is scrollable if it exceeds height */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.5); /* Softer, less dramatic shadow */
+  border-radius: 20px; /* Rounded corners for a smoother appearance */
+  padding: 25px; /* Slightly more inner spacing */
+}
+
+/* Smooth Scroll */
+html {
+  scroll-behavior: smooth; /* Enables smooth scrolling across sections */
+}
+
+#navigationDiv {
+  background: linear-gradient(90deg, #191414, #0f0f0f);
+  height: 80px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+#navigationLogo {
+  height: 100px;
+  margin-right: 230px;
+  width: auto;
+  cursor: pointer;
+  border-radius: 50px;
+  border-color: #1DB954, #14863e;
+}

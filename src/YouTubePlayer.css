@@ -1,0 +1,94 @@
+/* Fullscreen container */
+.youtube-container {
+  position: relative;
+  height: 120%;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* YouTube player as the background */
+.youtube-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none; /* Prevent interaction with the player */
+}
+
+/* Overlay for content */
+.overlay {
+  position: relative;
+  z-index: 1;
+  background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black */
+  color: white;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  overflow-y: auto;
+}
+
+/* Controls styling */
+.controls {
+  margin: 20px 0;
+}
+
+button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: white;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+/* Playlist container */
+.playlist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+/* Playlist item */
+.playlist-item {
+  cursor: pointer;
+  border: 2px solid transparent;
+  margin: 10px;
+  text-align: center;
+  width: 120px;
+  transition: transform 0.3s, border-color 0.3s;
+}
+
+.playlist-item:hover {
+  transform: scale(1.05);
+  border-color: #007bff;
+}
+
+.playlist-item.active {
+  border-color: #007bff;
+}
+
+.thumbnail {
+  width: 100%;
+  height: auto;
+  border-radius: 50px;
+}
+
+.video-title {
+  margin-top: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+}
