@@ -12,12 +12,13 @@ const Navigation = ({messageUpdate, output}) => {
   const onclickHandler = async () => {
     try {
       const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-      const prompt = `based on the ${song}, create` ;
+      const prompt = `based on the ${song}, create a playlist with 12 song. do not say anything else , just the playlist in list format.` ;
       
       const result = await model.generateContent(prompt);
       const generatedText = await result.response.text(); 
         // Set the parsed output (2D array)
         output(generatedText);
+        console.log('button clicked!!')
         
               
       const prompt1 = `Based on this song ${song} identify the characteristic of the listener in 3-5 sentences. Make it accurate as possible and relatable. Flatter them and use simple words for better understanding. ` ;
